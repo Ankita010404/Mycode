@@ -1,0 +1,8 @@
+def generate_even_numbers(n):
+    even_numbers = [i * 2 for i in range(n)]
+    return even_numbers
+
+# Example: Generate the first 5 even numbers
+n = 5
+result = generate_even_numbers(n)
+print(f"The first {n} even numbers are: {result}")
