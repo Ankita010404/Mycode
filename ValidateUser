@@ -1,0 +1,24 @@
+class UserValidator:
+    def __init__(self, valid_username, valid_password):
+        self.valid_username = valid_username
+        self.valid_password = valid_password
+
+    def validate_user(self, username, password):
+        if username == self.valid_username and password == self.valid_password:
+            return True
+        else:
+            return False
+
+# Example: Validate a user
+valid_username = "user123"
+valid_password = "password123"
+
+validator = UserValidator(valid_username, valid_password)
+
+input_username = input("Enter your username: ")
+input_password = input("Enter your password: ")
+
+if validator.validate_user(input_username, input_password):
+    print("User validation successful. Access granted.")
+else:
+    print("Invalid username or password. Access denied.")
