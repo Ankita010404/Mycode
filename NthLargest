@@ -1,0 +1,19 @@
+def nth_largest(numbers, n):
+    sorted_numbers = sorted(set(numbers), reverse=True)
+    
+    if 1 <= n <= len(sorted_numbers):
+        nth_largest_number = sorted_numbers[n - 1]
+        return nth_largest_number
+    else:
+        return None
+
+# Example: Find the 3rd largest number from a list
+number_list = [12, 45, 23, 56, 78, 23, 67, 89, 34, 56]
+n = 3
+
+result = nth_largest(number_list, n)
+
+if result is not None:
+    print(f"The {n}rd largest number is: {result}")
+else:
+    print(f"Invalid value of n. Please provide a valid position.")
